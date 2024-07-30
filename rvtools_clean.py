@@ -9,13 +9,15 @@ Example usage:
 
 python rvtools_clean.py -p "C:\\Users\\user\\Downloads\\rvtools.xlsx" -v -d -c -pr -o
 
--p: Path to RVTools output
--v: Hash VM names
--d: Hash Datacenter names
--c: Hash Cluster names
--pr: Print output to console
--o: Output to Excel
-
+Options:
+  -p, --path TEXT    Path to RVTools output  [required]
+  -a, --all          Hash everything
+  -v, --vm           Hash VM names
+  -d, --dc           Hash Datacenter names
+  -c, --cluster      Hash Cluster names
+  -pr, --print_data  Print output to console
+  -o, --output       Output to Excel
+  --help             Show this message and exit.
 """
 
 
@@ -26,7 +28,7 @@ def hash_col(df, col):
 
 @click.command()
 @click.option("--path", "-p", required=True, help="Path to RVTools output")
-@click.option("--all", "-v", is_flag=True, help="Hash everything")
+@click.option("--all", "-a", is_flag=True, help="Hash everything")
 @click.option("--vm", "-v", is_flag=True, help="Hash VM names")
 @click.option("--dc", "-d", is_flag=True, help="Hash Datacenter names")
 @click.option("--cluster", "-c", is_flag=True, help="Hash Cluster names")

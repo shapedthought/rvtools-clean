@@ -2,7 +2,13 @@ Hashes sensitive information in RvTools and returns the vInfo and vPartition dat
 
 Requires:
 
+Install Python https://www.python.org/ 
+
+Run the following command to add dependencies:
+
+```
 pip install pandas openpyxl click
+```
 
 Example usage:
 
