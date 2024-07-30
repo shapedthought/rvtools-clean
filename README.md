@@ -7,12 +7,15 @@ pip install pandas openpyxl click
 Example usage:
 
 ```
-python rvtools_clean.py -p "C:\\Users\\user\\Downloads\\rvtools.xlsx" -v -d -c -pr -o
+Usage: rvtools_clean.py [OPTIONS]
 
--p: Path to RVTools output
--v: Hash VM names
--d: Hash Datacenter names
--c: Hash Cluster names
--pr: Print output to console
--o: Output to Excel
+Options:
+  -p, --path TEXT    Path to RVTools output  [required]
+  -v, --all          Hash everything
+  -v, --vm           Hash VM names
+  -d, --dc           Hash Datacenter names
+  -c, --cluster      Hash Cluster names
+  -pr, --print_data  Print output to console
+  -o, --output       Output to Excel
+  --help             Show this message and exit.
 ```
